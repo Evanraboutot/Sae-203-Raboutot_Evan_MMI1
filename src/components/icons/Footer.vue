@@ -9,11 +9,11 @@
 						+1242422423
 					</li>
 					<li>
-						<i class="far fa-envelope text-red-400 mr-2"></i>
+						<i class="far fa-envelope text-red-500 mr-2"></i>
 						FeelTheRock@gmail.com
 					</li>
 					<li>
-						<i class="fab fa-instagram text-purple-400 mr-2"></i>
+					 	<i class="fab fa-instagram text-purple-400 mr-2"></i>
 						FeelThe-ROCK
 					</li>
 				</ul>
