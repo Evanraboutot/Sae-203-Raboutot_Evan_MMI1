@@ -6,11 +6,11 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [vue()],
   define: {
-    'process.env': {}
+  	'process.env': {}
   },
   resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
+  	alias: {
+  		'@': resolve(__dirname, 'src')
+  	}
   }
 })
