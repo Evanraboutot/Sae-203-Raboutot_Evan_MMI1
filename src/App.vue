@@ -1,19 +1,91 @@
 <template>
-  <header>
-    <icon-logo />
-    <FilmIcon class="h-5 w-5 fill-blue-300 stroke-blue-600" />
-    <nav>
-      <RouterLink to="/" class="text-blue-600 underline">Accueil</RouterLink>
-    </nav>
-  </header>
+	<Navbar />
+	<main class="w-full">
+	
+  <section class="lg:min-h-screen section bg-gradient-to-r from-sky-500 to-indigo-600">
+			<Headline />
+		</section>
 
-  <RouterView />
+		<section class="section bg-gray-100 flex flex-wrap justify-center md:justify-between gap-3">
+			<template v-for="(data, x) in highlights" :key="x">
+				<div class="border-b-2 px-2 pb-2 border-sky-600 flex flex-col items-center justify-center py-5">
+					<strong class="text-indigo-600 text-xl md:text-2xl">
+						{{ data.num }}
+					</strong>
+					<small class="text-gray-500">
+						<i class="text-sm mr-1" :class="data.icon"></i>
+						{{ data.title }}
+					</small>
+				</div>
+			</template>
+		</section>
+	
+		<section id="about" class="section bg-gray-100">
+			<About />
+		</section>
+
+		<section id="event" class="section bg-gray-50">
+			<Event />
+		</section>
+
+		<section id="FAQ" class="section bg-gray-100">
+			<FAQ />
+		</section>
+
+		<section id="contact" class="section bg-gray-50">
+			<Contact />
+		</section>
+
+		<section id="announcement" class="section bg-gray-100">
+			<Announcement />
+		</section>
+		
+		<section class="section bg-gradient-to-r from-slate-700 to-indigo-900">
+			<Footer />
+		</section>
+
+		
+	</main>
 </template>
 
-<script>
-import IconLogo from "./components/icons/IconLogo.vue";
-import { FilmIcon } from "@heroicons/vue/outline";
-export default {
-  components: { IconLogo, FilmIcon },
-};
+<script setup>
+
+	import Headline from '@/components/Headline.vue'
+  import Navbar from '@/components/Navbar.vue'
+
+
+	const highlights = [
+		{
+			title: 'Peserta',
+			num: 34,
+			icon: 'fas fa-user-friends'
+		},
+		{
+			title: 'Desa binaan',
+			num: 1,
+			icon: 'fas fa-building'
+		},
+		{
+			title: 'Kunjungan sekolah',
+			num: 5,
+			icon: 'fas fa-building'
+		},
+		{
+			title: 'Pemateri',
+			num: 3,
+			icon: 'fas fa-user-friends'
+		},
+		{
+			title: 'Hari kegiatan',
+			num: 3,
+			icon: 'fas fa-calendar-week'
+		},
+	]
+
 </script>
+
+<style scoped>
+	.section {
+		@apply w-full px-6 py-12 md:px-16 xl:px-28;
+	}
+</style>
