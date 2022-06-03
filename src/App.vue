@@ -24,6 +24,10 @@
 			<About />
 		</section>
 
+				<section id="contact" class="section bg-gray-50">
+			<Contact />
+		</section>
+
 		<section id="event" class="section bg-gray-50">
 			<Event />
 		</section>
@@ -32,9 +36,7 @@
 			<FAQ />
 		</section>
 
-		<section id="contact" class="section bg-gray-50">
-			<Contact />
-		</section>
+
 
 		<section id="announcement" class="section bg-gray-100">
 			<Announcement />
@@ -50,38 +52,13 @@
 
 <script setup>
 
+	import Navbar from '@/components/Navbar.vue'
 	import Headline from '@/components/Headline.vue'
-  import Navbar from '@/components/Navbar.vue'
-
-
-	const highlights = [
-		{
-			title: 'Peserta',
-			num: 34,
-			icon: 'fas fa-user-friends'
-		},
-		{
-			title: 'Desa binaan',
-			num: 1,
-			icon: 'fas fa-building'
-		},
-		{
-			title: 'Kunjungan sekolah',
-			num: 5,
-			icon: 'fas fa-building'
-		},
-		{
-			title: 'Pemateri',
-			num: 3,
-			icon: 'fas fa-user-friends'
-		},
-		{
-			title: 'Hari kegiatan',
-			num: 3,
-			icon: 'fas fa-calendar-week'
-		},
-	]
-
+	import About from '@/components/About.vue'
+	import Event from '@/components/Event.vue'
+	import FAQ from '@/components/FAQ.vue'
+	import Footer from '@/components/Footer.vue'
+	import PageNotFound from '@/components/PageNotFound.vue'
 </script>
 
 <style scoped>
