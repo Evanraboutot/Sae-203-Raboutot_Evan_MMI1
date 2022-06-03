@@ -45,35 +45,31 @@
 
 	const menuActive = ref('Beranda')
 	const showMenu = ref(false)
-	const viewport = ref(window.innerWidth) //Get current width of browser
+	const viewport = ref(window.innerWidth) 
 
-	if ( viewport.value >= 768 ) showMenu.value = true //If device tablet or more wider shoow menu
+	if ( viewport.value >= 768 ) showMenu.value = true 
 	
 	const menus = [
 		{
-			name: 'Beranda',
+			name: 'Accueil',
 			to: '#'
 		},
 		{
-			name: 'Tentang',
+			name: 'Programmes',
 			to: '#about'
 		},
 		{
-			name: 'Kegiatan',
+			name: 'Artistes',
 			to: '#event'
+		},
+		{
+			name: 'Festival',
+			to: '#'
 		},
 		{
 			name: 'FAQ',
 			to: '#FAQ'
 		},
-		{
-			name: 'Narahubung',
-			to: '#contact'
-		},
-		{
-			name: 'Pengumuman',
-			to: '#announcement'
-		}
 	]
 	
 </script>
